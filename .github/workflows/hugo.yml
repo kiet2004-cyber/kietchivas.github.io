@@ -32,11 +32,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build with Hugo
-        run: hugo --minify
+        un: hugo --minify --source blog-hugo-2025
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./blog-hugo-2025/public
 
   deploy:
     environment:
